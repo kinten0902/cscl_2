@@ -178,6 +178,16 @@ def sen_to_fv(sen, max_len, model, ravel):
         sen_fv.append(s_vec)
     return np.array(sen_fv)
 
+def sen_to_same_length(sen, max_len):
+    sen_sl = []
+    for s in sen:
+        s_pad = np.pad(
+            list(map(int, s)), (0, max_len - len(s)),
+            'constant',
+            constant_values=(0, 0))
+        sen_sl.append(s_pad)
+    return np.array(sen_sl)
+
 
 def get_w2v_model():
     return word2vec.Word2Vec.load("../data/w2v_model")
