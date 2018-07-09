@@ -1,0 +1,9 @@
+2.1.1    embedding lstm
+2.1.2    embedding s2s
+2.1.3.1  w2v lstm bidirectional A(Lc Rc Lm Rm LRc)
+2.1.3.2  w2v lstm bidirectional A(Lc Rc LRc LRm)
+2.1.3.3  w2v lstm bidirectional A(Lc2 Rc2 LRc LRm)
+2.1.3.4  w2v lstm bidirectional A(Lc Rc LRc [-1])
+2.1.4.2  w2v lstm bidirectional A(Lc Rc LRc LRm) + states(x=>x_pre)
+2.1.4.3  w2v lstm bidirectional A(Lc Rc LRc LRm) + states(x_pre=>x)
+2.1.4.4  w2v lstm bidirectional A(Lc Rc LRc LRm) + states(x_pre=>x) x_pre=>erp_x
